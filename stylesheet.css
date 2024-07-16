@@ -258,6 +258,7 @@ li {
         position: static;
         top: 0;
         margin-top: 3em;
+        right: 1em;
     }
 
     .textColumn {
