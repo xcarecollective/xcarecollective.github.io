@@ -169,10 +169,18 @@ li {
         display: none;
     }
 
+    #menuMobile {
+        margin: 0 0 3em 0;
+    }
+
     li {
         display: block;
         margin: 1em;
         font-size: 2rem;
+    }
+
+    li#active {
+        background: linear-gradient(180deg,rgba(255,255,255,0) 80%, #EEFF1F 0);
     }
 
     .logo {
@@ -242,13 +250,14 @@ li {
     .contentText {
         float: none;
         width: 100%;
-        margin: 0;
+        margin: 2em 0 0 0;
     }
 
     .contentImage img {
         max-width: 100%;
         position: static;
         top: 0;
+        margin-top: 3em;
     }
 
     .textColumn {
@@ -307,6 +316,7 @@ li {
 @media screen and (max-width: 800px) {
     .gallery {
         margin: 0;
+        padding: 0;
     }
     .column {
         max-width: 100%;
