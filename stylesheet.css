@@ -49,7 +49,7 @@ a {
 h1 {
     font-family: wondertype;
     font-size: 1.5rem;
-    margin: 2em 0 1em;
+    margin: 1em 0;
 }
 
 h1 a {
@@ -239,7 +239,7 @@ li {
 .textColumn {
     flex: 40%;
     max-width: 40%;
-    padding: 1em;
+    padding: 0 0 1em;
 }
 
 @media screen and (max-width:800px) {
