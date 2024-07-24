@@ -303,6 +303,10 @@ li {
     height: auto;
 }
 
+.floating {
+    transition: transform 2s;
+}
+
 @media screen and (max-width: 1080px) {
     .galleryImage {
         padding: 1em;
