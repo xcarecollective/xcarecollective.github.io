@@ -9,7 +9,8 @@ function openMobileMenu() {
 
 
     /*
-    Accessibility
+        Accessibility
+        
         Scaling/zooming animations are problematic for accessibility, as they are a common 
         trigger for certain types of migraine. If you need to include such animations on your 
         website, you should provide a control to allow users to turn off animations, preferably site-wide.
@@ -28,9 +29,9 @@ function openMobileMenu() {
             */
 
             //const factor = 0.01; //very subtle
-            const factor = 0.015; // subtle
+            //const factor = 0.015; // subtle
             //const factor = 0.02; //noticeable
-            //const factor = 0.05; //visible
+            const factor = 0.05; //visible
 
             /*
             const container = document.getElementById('gallery');
