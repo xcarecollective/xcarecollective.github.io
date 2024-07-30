@@ -135,6 +135,11 @@ li {
     position:relative;
 }
 
+.logo{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 .logo#active, .logo a:hover, li a:hover, li#active {
     background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #EEFF1F 0);
 }
@@ -237,6 +242,7 @@ li {
 }
 
 .textColumn {
+    margin-left: 170px;
     flex: 75%;
     padding: 0 0 1em;
     align-items: center;
@@ -247,6 +253,7 @@ li {
     flex: 25%;
     padding: 0 0 1em;
     align-items: center;
+    display: none;
 }
 
 @media screen and (max-width:800px) {
@@ -272,6 +279,7 @@ li {
         flex: 100%;
         max-width: 100%;
         padding: 0;
+        margin-left: 0px;
     }
 }
 
