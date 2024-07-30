@@ -215,7 +215,7 @@ li {
 
 .contentText {
     float: left;
-    width: 80%;
+    width: 75%;
 }
 
 .contentImage img {
@@ -237,9 +237,16 @@ li {
 }
 
 .textColumn {
-    flex: 40%;
-    max-width: 40%;
+    flex: 75%;
     padding: 0 0 1em;
+    align-items: center;
+    height: 100%;
+}
+
+.textColumnIMG {
+    flex: 25%;
+    padding: 0 0 1em;
+    align-items: center;
 }
 
 @media screen and (max-width:800px) {
