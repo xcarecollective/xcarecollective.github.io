@@ -269,6 +269,10 @@ li {
         margin: 2em 0 0 0;
     }
 
+    .activities{
+        margin-left: 0px;
+    }
+
     .contentImage img {
         max-width: 100%;
         position: static;
