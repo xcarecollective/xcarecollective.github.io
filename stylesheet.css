@@ -223,6 +223,10 @@ li {
     width: 75%;
 }
 
+.activities{
+    margin-left: 120px;
+}
+
 .contentImage img {
     position: fixed;
     max-width: 20%;
@@ -242,7 +246,6 @@ li {
 }
 
 .textColumn {
-    margin-left: 170px;
     flex: 75%;
     padding: 0 0 1em;
     align-items: center;
@@ -253,7 +256,6 @@ li {
     flex: 25%;
     padding: 0 0 1em;
     align-items: center;
-    display: none;
 }
 
 @media screen and (max-width:800px) {
