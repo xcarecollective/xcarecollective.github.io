@@ -223,9 +223,73 @@ li {
     width: 75%;
 }
 
+/* spacing between the paragraphs of all text content: */
+.contentText p{
+    margin-bottom: 25px;
+}
+
+
+
+/* tags for category highlights in activities page */
+
+.communication {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 0%, #99f687 0);
+    text-decoration: none;
+}
+
+.workshop {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 0%, #f591dc 0);
+    text-decoration: none;
+}
+
+.guest-lecture {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 0%, #f5b077 0);
+    text-decoration: none;
+}
+
+.group-exhibition {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 0%, #74f2ea 0);
+    text-decoration: none;
+}
+
+.keynote {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 0%, #51f6eb 0);
+    text-decoration: none;
+}
+
+.debate {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 0%, #c887f6 0);
+    text-decoration: none;
+}
+
+.residency{
+    background: linear-gradient(180deg,rgba(255,255,255,0) 0%, #b5eeff 0);
+    text-decoration: none;
+}
+
+.poster{
+    background: linear-gradient(180deg,rgba(255,255,255,0) 0%, #949cf5 0);
+    text-decoration: none;
+}
+
+.jury {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 0%, #f88787 0);
+    text-decoration: none;
+}
+
+
+/* the previous code that adds a margin on the left
 .activities{
     margin-left: 120px;
 }
+*/
+
+
+/* activities margin-bottom is 20px rather than 25px as for p content: */
+.activities p{
+    margin-bottom: 20px;
+}
+
 
 .contentImage img {
     position: fixed;
