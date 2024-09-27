@@ -1,71 +1,54 @@
 function openMobileMenu() {
-    var x = document.getElementById("menuMobile");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-    }
+  var x = document.getElementById("menuMobile");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+);
 
-    /*
-        Accessibility
-        
-        Scaling/zooming animations are problematic for accessibility, as they are a common 
-        trigger for certain types of migraine. If you need to include such animations on your 
-        website, you should provide a control to allow users to turn off animations, preferably site-wide.
+function animateFigureEight(element, index) {
+  const amplitude = 90; // Adjust for the size of the figure-eight or this movement it does
+  const frequency = 0.01; // Adjust to speed up or slow down the movement
+  let angle = 0; // Start angle
 
-        Also, consider making use of the prefers-reduced-motion media feature — use it to write 
-        a media query that will turn off animations if the user has reduced animation specified 
-        in their system preferences.
-    */
+  function animate() {
+    // Calculate x and y positions for a "figure-eight path"
+    const x = amplitude * Math.sin(angle * 1); // Horizontal movement
+    const y = amplitude * Math.sin(angle * 3); // Vertical movement (double the frequency)
 
-        function randomPosition(element) {
+    // Apply the transform
+    element.style.transform = `translate(${x}px, ${y}px)`;
 
-            //rework this so that it allows movement within a very tiny border of the image itself:
-            /*
-            const containerWidth = element.offsetWidth+50;
-            const containerHeight = element.offsetHeight+50;
-            */
+    // Increment the angle for the next frame
+    angle += frequency;
 
-            //const factor = 0.01; //very subtle
-            //const factor = 0.015; // subtle
-            //const factor = 0.02; //noticeable
-            const factor = 0.05; //visible
+    // Request the next animation frame
+    requestAnimationFrame(animate);
+  }
 
-            /*
-            const container = document.getElementById('gallery');
-            const containerWidth = container.offsetWidth;
-            const containerHeight = container.offsetHeight;
-            const factor = 0.005;
-            */
-    
-            /*
-            //moves suuuuper quickly
-            const newLeft = Math.random() * (containerWidth - element.offsetWidth);
-            const newTop = Math.random() * (containerHeight - element.offsetHeight);
-            */
+  // Start the animation for each image
+  animate();
+}
 
-            //super subtle movement
-            const newLeft = (Math.random()*factor) * element.offsetWidth;
-            const newTop = (Math.random()*factor) * element.offsetHeight;
-    
-            /*
-            //super subtle movement
-            const newLeft = (Math.random()*factor) * (containerWidth - element.offsetWidth);
-            const newTop = (Math.random()*factor) * (containerHeight - element.offsetHeight);
-            */
-    
-            element.style.transform = `translate( ${newLeft}px, ${newTop}px )`;
-        }
-    
-        function floatImages() {
-            const interval = 300;
-            const floating = document.querySelectorAll('.floating');
-            floating.forEach(floater => {
-                randomPosition(floater);
-                setInterval(() => randomPosition(floater), interval);
-            });
-        }
-    
-        window.onload = floatImages;
+function floatImages() {
+  const floating = document.querySelectorAll(".floating");
+  floating.forEach((floater, index) => {
+    // Add a random delay to the start of each animation
+    const randomDelay = Math.random() * 3000; // Delay in milliseconds (up to 2 seconds)
+    setTimeout(() => {
+      if (!prefersReducedMotion.matches) {
+        animateFigureEight(floater, index);
+      } else {
+        // If user prefers reduced motion, set position to static
+        floater.style.transform = "none";
+      }
+    }, randomDelay);
+  });
+}
+
+window.onload = floatImages;
